@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+if ARGV.size == 1
+  key = ARGV[0]
+  system *%W[
+    convert
+      +antialias
+      -size 320x240
+      -background #23d2bc
+      -font Verdana
+      -pointsize 32
+      -fill #23d1bc
+      -gravity Center
+      #{"caption:The answer is #{key}"}
+      -flatten secret_message.png
+  ]
+else
+  STDERR.puts "Usage: #{$0} key"
+  exit 1
+end
