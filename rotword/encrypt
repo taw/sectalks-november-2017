@@ -1,0 +1,28 @@
+#!/usr/bin/env ruby
+
+def rotn(word, keychar)
+  a = "a".ord
+  ki = keychar.ord - a
+  word.chars.map do |char|
+    if char =~ /\A[0-9]\z/
+      char
+    elsif char =~ /\A[a-z]\z/
+      i = char.ord - a
+      (((i + ki) % 26) + a).chr
+    else
+      raise "Bad character: #{char}"
+    end
+  end.join
+end
+
+def encrypt(msg, key)
+  words = msg.unicode_normalize(:nfd).downcase.gsub(/[^\sa-z0-9]/, "").split(/\s+/)
+  words.zip(key.chars.cycle).map{|w,c| rotn(w,c)}.join(" ")
+end
+
+if ARGV.size == 1
+  puts encrypt(STDIN.read, ARGV[0])
+else
+  STDERR.puts "Usage: #{$0} key"
+  exit 1
+end
