@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+
+def generate_image(key, source_path, target_path)
+  input_data = open(source_path, "rb").read.unpack("C*")
+  key = key.unpack("C*")
+  encrypted = input_data.zip(key.cycle).map{|u,v| u^v}.pack("C*")
+  open(target_path, "wb"){|fh| fh.write encrypted }
+end
+
+if ARGV.size == 3
+  generate_image(*ARGV)
+else
+  STDERR.puts "Usage: #{$0} key source.gif target.gif"
+  exit 1
+end
