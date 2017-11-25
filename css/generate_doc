@@ -1,0 +1,53 @@
+#!/usr/bin/env ruby
+
+def input_box(i)
+  %Q[
+   <div class="box k#{i}">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ ]
+end
+
+def style_rules(real,i)
+  values = ([*-100..100] - [0]).map{|x| x * 100}
+  ("a".."z").flat_map do |c|
+    x0 = values.sample
+    y0 = values.sample
+    if c == real
+      x1 = -x0
+      y1 = -y0
+    else
+      x1 = -x0 + values.sample
+      y1 = -y0 + values.sample
+    end
+    [
+      ".k#{i} input.#{c} ~ .i1 .i2 { transform: translate(#{x0}px, #{y0}px); }\n",
+      ".k#{i} input.#{c} ~ .i1 .i2 .i3 { transform: translate(#{x1}px, #{y1}px); }\n",
+    ]
+  end
+end
+
+def generate_doc(key)
+  generated_style = []
+  generated_inputs = []
+
+  key.chars.each_with_index do |c,i|
+    generated_style.push *style_rules(c,i)
+    generated_inputs << input_box(i)
+  end
+
+  template = open("template.html").read
+  output = template
+    .sub("/* style */", generated_style.shuffle.join)
+    .sub("<!-- inputs -->", generated_inputs.join)
+  open("output.html", "w").write(output)
+end
+
+if ARGV.size == 1
+  key = ARGV[0]
+  generate_doc(key)
+else
+  STDERR.puts "Usage: #{$0} key"
+  exit 1
+end
