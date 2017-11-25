@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Challenge</title>
+  </head>
+  <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+  <style>
+    #app {
+      text-align: center;
+    }
+    .box {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 100px;
+      border: 1px solid black;
+    }
+    .box input {
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: 40px;
+      height: 40px;
+    }
+    .i1 {
+      position: absolute;
+      left: 0px;
+      top: 50px;
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      overflow: hidden;
+    }
+    .i2 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      transform: translate(90000px, 90000px);
+    }
+    .i3 {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      transform: translate(90000px, 90000px);
+    }
+    .i4 {
+      position: absolute;
+      background-color: green;
+      width: 50px;
+      height: 50px;
+    }
+    .k9 input.u ~ .i1 .i2 { transform: translate(-800px, 5300px); }
+.k11 input.q ~ .i1 .i2 .i3 { transform: translate(5600px, -18900px); }
+.k12 input.u ~ .i1 .i2 { transform: translate(-8300px, 5200px); }
+.k11 input.w ~ .i1 .i2 .i3 { transform: translate(-4900px, 700px); }
+.k9 input.b ~ .i1 .i2 .i3 { transform: translate(-15300px, -15100px); }
+.k12 input.v ~ .i1 .i2 .i3 { transform: translate(-5900px, 10500px); }
+.k4 input.a ~ .i1 .i2 { transform: translate(1700px, 8400px); }
+.k7 input.c ~ .i1 .i2 .i3 { transform: translate(-2500px, 16000px); }
+.k12 input.l ~ .i1 .i2 .i3 { transform: translate(8000px, 5000px); }
+.k11 input.z ~ .i1 .i2 .i3 { transform: translate(-3100px, 1800px); }
+.k4 input.b ~ .i1 .i2 .i3 { transform: translate(4100px, -1700px); }
+.k5 input.q ~ .i1 .i2 { transform: translate(-8100px, -9200px); }
+.k2 input.m ~ .i1 .i2 .i3 { transform: translate(-13400px, 3900px); }
+.k0 input.w ~ .i1 .i2 { transform: translate(-200px, -5000px); }
+.k3 input.c ~ .i1 .i2 .i3 { transform: translate(-9200px, -10200px); }
+.k0 input.f ~ .i1 .i2 .i3 { transform: translate(-4300px, -2400px); }
+.k12 input.i ~ .i1 .i2 { transform: translate(4300px, -4700px); }
+.k1 input.e ~ .i1 .i2 .i3 { transform: translate(6100px, 2800px); }
+.k12 input.x ~ .i1 .i2 { transform: translate(-600px, 7100px); }
+.k6 input.e ~ .i1 .i2 .i3 { transform: translate(17200px, 8700px); }
+.k6 input.j ~ .i1 .i2 { transform: translate(-7800px, -8800px); }
+.k4 input.d ~ .i1 .i2 { transform: translate(3000px, 7500px); }
+.k2 input.a ~ .i1 .i2 .i3 { transform: translate(-3200px, 14800px); }
+.k0 input.b ~ .i1 .i2 .i3 { transform: translate(12400px, -13200px); }
+.k1 input.a ~ .i1 .i2 { transform: translate(9200px, 1500px); }
+.k8 input.q ~ .i1 .i2 { transform: translate(-9400px, -10000px); }
+.k9 input.q ~ .i1 .i2 .i3 { transform: translate(6500px, 600px); }
+.k12 input.a ~ .i1 .i2 .i3 { transform: translate(-1800px, -2200px); }
+.k6 input.i ~ .i1 .i2 .i3 { transform: translate(10000px, 8800px); }
+.k12 input.h ~ .i1 .i2 .i3 { transform: translate(-7100px, 1500px); }
+.k4 input.f ~ .i1 .i2 { transform: translate(-7900px, 6700px); }
+.k6 input.b ~ .i1 .i2 .i3 { transform: translate(-9000px, 15600px); }
+.k1 input.z ~ .i1 .i2 .i3 { transform: translate(-2600px, 10700px); }
+.k12 input.s ~ .i1 .i2 { transform: translate(-4300px, 400px); }
+.k8 input.y ~ .i1 .i2 { transform: translate(-9300px, 1000px); }
+.k9 input.z ~ .i1 .i2 .i3 { transform: translate(-4900px, -600px); }
+.k5 input.x ~ .i1 .i2 .i3 { transform: translate(9600px, -6600px); }
+.k3 input.r ~ .i1 .i2 { transform: translate(4100px, -2200px); }
+.k3 input.b ~ .i1 .i2 .i3 { transform: translate(-7800px, 13200px); }
+.k6 input.l ~ .i1 .i2 .i3 { transform: translate(-8900px, -18100px); }
+.k11 input.z ~ .i1 .i2 { transform: translate(4100px, -500px); }
+.k8 input.m ~ .i1 .i2 .i3 { transform: translate(-8200px, 3600px); }
+.k7 input.j ~ .i1 .i2 { transform: translate(5400px, -3100px); }
+.k4 input.w ~ .i1 .i2 .i3 { transform: translate(-5000px, 11200px); }
+.k10 input.z ~ .i1 .i2 .i3 { transform: translate(-8800px, 500px); }
+.k10 input.q ~ .i1 .i2 { transform: translate(1800px, -9800px); }
+.k0 input.t ~ .i1 .i2 .i3 { transform: translate(-9900px, -4000px); }
+.k7 input.z ~ .i1 .i2 .i3 { transform: translate(2900px, 4800px); }
+.k6 input.u ~ .i1 .i2 .i3 { transform: translate(11800px, 12400px); }
+.k4 input.h ~ .i1 .i2 { transform: translate(-5400px, -7100px); }
+.k5 input.l ~ .i1 .i2 .i3 { transform: translate(-7100px, -800px); }
+.k9 input.t ~ .i1 .i2 { transform: translate(-1200px, -1700px); }
+.k11 input.s ~ .i1 .i2 .i3 { transform: translate(-16000px, -8400px); }
+.k2 input.l ~ .i1 .i2 .i3 { transform: translate(3900px, -5800px); }
+.k10 input.t ~ .i1 .i2 { transform: translate(-7900px, -6200px); }
+.k7 input.d ~ .i1 .i2 { transform: translate(-5900px, 6200px); }
+.k1 input.h ~ .i1 .i2 .i3 { transform: translate(3600px, -1000px); }
+.k8 input.n ~ .i1 .i2 { transform: translate(2600px, 5200px); }
+.k9 input.p ~ .i1 .i2 { transform: translate(1100px, 6600px); }
+.k12 input.k ~ .i1 .i2 .i3 { transform: translate(-13700px, 8800px); }
+.k0 input.v ~ .i1 .i2 .i3 { transform: translate(2700px, 6000px); }
+.k4 input.g ~ .i1 .i2 .i3 { transform: translate(9800px, 500px); }
+.k3 input.h ~ .i1 .i2 { transform: translate(4900px, -3800px); }
+.k0 input.p ~ .i1 .i2 { transform: translate(-1900px, -8800px); }
+.k3 input.w ~ .i1 .i2 .i3 { transform: translate(-5600px, -11100px); }
+.k9 input.j ~ .i1 .i2 { transform: translate(3300px, 7000px); }
+.k1 input.t ~ .i1 .i2 .i3 { transform: translate(0px, 7600px); }
+.k1 input.i ~ .i1 .i2 .i3 { transform: translate(-2700px, 10800px); }
+.k8 input.v ~ .i1 .i2 .i3 { transform: translate(5100px, 11400px); }
+.k6 input.t ~ .i1 .i2 { transform: translate(-2200px, 5400px); }
+.k4 input.v ~ .i1 .i2 .i3 { transform: translate(800px, 15300px); }
+.k9 input.v ~ .i1 .i2 .i3 { transform: translate(4600px, 8500px); }
+.k8 input.x ~ .i1 .i2 .i3 { transform: translate(1100px, -6500px); }
+.k7 input.y ~ .i1 .i2 { transform: translate(-300px, 1800px); }
+.k6 input.s ~ .i1 .i2 .i3 { transform: translate(6400px, 12000px); }
+.k5 input.r ~ .i1 .i2 { transform: translate(3700px, -400px); }
+.k7 input.b ~ .i1 .i2 .i3 { transform: translate(-12300px, -5100px); }
+.k5 input.v ~ .i1 .i2 { transform: translate(900px, 1300px); }
+.k2 input.b ~ .i1 .i2 { transform: translate(1400px, 8000px); }
+.k10 input.k ~ .i1 .i2 { transform: translate(-8800px, -9900px); }
+.k3 input.v ~ .i1 .i2 .i3 { transform: translate(4200px, 2800px); }
+.k10 input.o ~ .i1 .i2 .i3 { transform: translate(-500px, -13900px); }
+.k12 input.j ~ .i1 .i2 { transform: translate(9900px, 3600px); }
+.k9 input.h ~ .i1 .i2 .i3 { transform: translate(6900px, 1700px); }
+.k0 input.y ~ .i1 .i2 .i3 { transform: translate(-4900px, 3800px); }
+.k7 input.t ~ .i1 .i2 { transform: translate(-6000px, -7000px); }
+.k2 input.t ~ .i1 .i2 { transform: translate(-6100px, -5800px); }
+.k12 input.f ~ .i1 .i2 .i3 { transform: translate(900px, -5900px); }
+.k11 input.n ~ .i1 .i2 .i3 { transform: translate(-2300px, 1300px); }
+.k4 input.a ~ .i1 .i2 .i3 { transform: translate(-2700px, -16200px); }
+.k3 input.a ~ .i1 .i2 { transform: translate(-2100px, 2000px); }
+.k7 input.u ~ .i1 .i2 .i3 { transform: translate(12600px, 1700px); }
+.k12 input.z ~ .i1 .i2 { transform: translate(500px, 700px); }
+.k5 input.a ~ .i1 .i2 .i3 { transform: translate(2200px, 4100px); }
+.k7 input.u ~ .i1 .i2 { transform: translate(-8800px, -7600px); }
+.k12 input.b ~ .i1 .i2 { transform: translate(7000px, 2600px); }
+.k4 input.z ~ .i1 .i2 { transform: translate(-6300px, 1800px); }
+.k12 input.y ~ .i1 .i2 .i3 { transform: translate(7100px, 7300px); }
+.k11 input.s ~ .i1 .i2 { transform: translate(9900px, 7600px); }
+.k0 input.s ~ .i1 .i2 { transform: translate(-6100px, 4000px); }
+.k10 input.c ~ .i1 .i2 .i3 { transform: translate(-11600px, -2100px); }
+.k2 input.x ~ .i1 .i2 { transform: translate(-10000px, 1800px); }
+.k12 input.c ~ .i1 .i2 { transform: translate(-8900px, 6300px); }
+.k2 input.h ~ .i1 .i2 .i3 { transform: translate(-7900px, 8100px); }
+.k0 input.g ~ .i1 .i2 .i3 { transform: translate(-500px, 4100px); }
+.k12 input.j ~ .i1 .i2 .i3 { transform: translate(-2200px, -1200px); }
+.k1 input.e ~ .i1 .i2 { transform: translate(-5200px, -4600px); }
+.k2 input.u ~ .i1 .i2 { transform: translate(2700px, 3000px); }
+.k10 input.s ~ .i1 .i2 .i3 { transform: translate(6800px, -3000px); }
+.k5 input.p ~ .i1 .i2 { transform: translate(-5800px, 5600px); }
+.k9 input.a ~ .i1 .i2 { transform: translate(8400px, -2600px); }
+.k11 input.h ~ .i1 .i2 .i3 { transform: translate(-11100px, -2700px); }
+.k8 input.t ~ .i1 .i2 { transform: translate(200px, -200px); }
+.k8 input.k ~ .i1 .i2 { transform: translate(3900px, -2400px); }
+.k12 input.e ~ .i1 .i2 { transform: translate(1600px, -6100px); }
+.k3 input.n ~ .i1 .i2 .i3 { transform: translate(-6200px, -11400px); }
+.k0 input.q ~ .i1 .i2 { transform: translate(-5000px, -7400px); }
+.k11 input.d ~ .i1 .i2 .i3 { transform: translate(2100px, 6900px); }
+.k2 input.n ~ .i1 .i2 .i3 { transform: translate(-3400px, 10400px); }
+.k1 input.g ~ .i1 .i2 .i3 { transform: translate(-6100px, -17800px); }
+.k12 input.q ~ .i1 .i2 .i3 { transform: translate(-1200px, -15200px); }
+.k10 input.v ~ .i1 .i2 { transform: translate(-8300px, 9900px); }
+.k8 input.d ~ .i1 .i2 { transform: translate(7300px, -4000px); }
+.k8 input.f ~ .i1 .i2 .i3 { transform: translate(13300px, -7400px); }
+.k10 input.u ~ .i1 .i2 .i3 { transform: translate(6700px, 9100px); }
+.k1 input.q ~ .i1 .i2 { transform: translate(-7600px, -900px); }
+.k11 input.k ~ .i1 .i2 { transform: translate(1700px, 4900px); }
+.k10 input.x ~ .i1 .i2 { transform: translate(9700px, -1800px); }
+.k1 input.h ~ .i1 .i2 { transform: translate(-4900px, -2700px); }
+.k4 input.l ~ .i1 .i2 { transform: translate(2200px, 7400px); }
+.k10 input.z ~ .i1 .i2 { transform: translate(400px, 8600px); }
+.k12 input.m ~ .i1 .i2 .i3 { transform: translate(-1600px, 14000px); }
+.k12 input.o ~ .i1 .i2 { transform: translate(3900px, -3400px); }
+.k4 input.k ~ .i1 .i2 .i3 { transform: translate(7100px, -6200px); }
+.k4 input.i ~ .i1 .i2 { transform: translate(-3400px, 3300px); }
+.k9 input.x ~ .i1 .i2 { transform: translate(-6800px, 9600px); }
+.k6 input.g ~ .i1 .i2 .i3 { transform: translate(-2200px, -4000px); }
+.k7 input.m ~ .i1 .i2 .i3 { transform: translate(1000px, -10000px); }
+.k6 input.k ~ .i1 .i2 .i3 { transform: translate(8900px, -100px); }
+.k7 input.r ~ .i1 .i2 { transform: translate(6200px, 4500px); }
+.k12 input.d ~ .i1 .i2 .i3 { transform: translate(-13400px, -7000px); }
+.k6 input.j ~ .i1 .i2 .i3 { transform: translate(9700px, 13200px); }
+.k2 input.w ~ .i1 .i2 { transform: translate(4600px, 400px); }
+.k11 input.w ~ .i1 .i2 { transform: translate(6300px, -4400px); }
+.k11 input.g ~ .i1 .i2 .i3 { transform: translate(600px, -2500px); }
+.k2 input.c ~ .i1 .i2 .i3 { transform: translate(1600px, -1900px); }
+.k3 input.o ~ .i1 .i2 .i3 { transform: translate(400px, -5700px); }
+.k1 input.l ~ .i1 .i2 .i3 { transform: translate(8800px, 5000px); }
+.k11 input.i ~ .i1 .i2 { transform: translate(7100px, 3200px); }
+.k10 input.i ~ .i1 .i2 { transform: translate(100px, 3100px); }
+.k8 input.z ~ .i1 .i2 .i3 { transform: translate(-2400px, -2100px); }
+.k6 input.h ~ .i1 .i2 { transform: translate(5800px, -7800px); }
+.k7 input.v ~ .i1 .i2 .i3 { transform: translate(12800px, 9200px); }
+.k1 input.p ~ .i1 .i2 .i3 { transform: translate(-12400px, 2400px); }
+.k2 input.x ~ .i1 .i2 .i3 { transform: translate(2100px, 6200px); }
+.k9 input.w ~ .i1 .i2 { transform: translate(3100px, -600px); }
+.k6 input.v ~ .i1 .i2 { transform: translate(2100px, 2100px); }
+.k8 input.m ~ .i1 .i2 { transform: translate(5100px, -5700px); }
+.k11 input.v ~ .i1 .i2 .i3 { transform: translate(-700px, -4600px); }
+.k5 input.j ~ .i1 .i2 { transform: translate(10000px, -8700px); }
+.k7 input.i ~ .i1 .i2 .i3 { transform: translate(6300px, -1500px); }
+.k5 input.n ~ .i1 .i2 { transform: translate(-5200px, -5300px); }
+.k5 input.k ~ .i1 .i2 .i3 { transform: translate(-9700px, -11100px); }
+.k0 input.t ~ .i1 .i2 { transform: translate(9000px, 1900px); }
+.k11 input.i ~ .i1 .i2 .i3 { transform: translate(-10700px, -12300px); }
+.k6 input.z ~ .i1 .i2 .i3 { transform: translate(-2400px, -10700px); }
+.k5 input.m ~ .i1 .i2 { transform: translate(4200px, -6600px); }
+.k11 input.f ~ .i1 .i2 { transform: translate(1600px, -100px); }
+.k11 input.n ~ .i1 .i2 { transform: translate(2300px, -1300px); }
+.k10 input.h ~ .i1 .i2 { transform: translate(-7200px, -4600px); }
+.k5 input.b ~ .i1 .i2 { transform: translate(3900px, 7600px); }
+.k12 input.f ~ .i1 .i2 { transform: translate(-6600px, 2400px); }
+.k0 input.d ~ .i1 .i2 { transform: translate(-3100px, -5200px); }
+.k2 input.i ~ .i1 .i2 .i3 { transform: translate(-3700px, -5800px); }
+.k0 input.l ~ .i1 .i2 { transform: translate(-7800px, -300px); }
+.k7 input.i ~ .i1 .i2 { transform: translate(3000px, 1200px); }
+.k6 input.x ~ .i1 .i2 .i3 { transform: translate(-9200px, 5400px); }
+.k10 input.o ~ .i1 .i2 { transform: translate(-9000px, 3900px); }
+.k10 input.a ~ .i1 .i2 .i3 { transform: translate(-10800px, -10100px); }
+.k3 input.v ~ .i1 .i2 { transform: translate(-400px, 6700px); }
+.k4 input.y ~ .i1 .i2 .i3 { transform: translate(15400px, 2600px); }
+.k2 input.t ~ .i1 .i2 .i3 { transform: translate(3400px, 5600px); }
+.k10 input.d ~ .i1 .i2 { transform: translate(4600px, 7700px); }
+.k5 input.q ~ .i1 .i2 .i3 { transform: translate(16100px, 6000px); }
+.k5 input.i ~ .i1 .i2 .i3 { transform: translate(-9300px, -3200px); }
+.k9 input.b ~ .i1 .i2 { transform: translate(8900px, 9100px); }
+.k8 input.w ~ .i1 .i2 .i3 { transform: translate(-1600px, 9400px); }
+.k2 input.s ~ .i1 .i2 { transform: translate(9700px, -6400px); }
+.k8 input.p ~ .i1 .i2 .i3 { transform: translate(-9000px, -7200px); }
+.k12 input.i ~ .i1 .i2 .i3 { transform: translate(3300px, 13900px); }
+.k11 input.d ~ .i1 .i2 { transform: translate(-4400px, -1600px); }
+.k6 input.w ~ .i1 .i2 .i3 { transform: translate(12600px, 5300px); }
+.k6 input.t ~ .i1 .i2 .i3 { transform: translate(8100px, -6200px); }
+.k8 input.c ~ .i1 .i2 .i3 { transform: translate(-2900px, 2300px); }
+.k5 input.y ~ .i1 .i2 .i3 { transform: translate(-5500px, -7000px); }
+.k8 input.r ~ .i1 .i2 { transform: translate(-7700px, 9400px); }
+.k11 input.u ~ .i1 .i2 .i3 { transform: translate(-8700px, -7100px); }
+.k1 input.c ~ .i1 .i2 { transform: translate(1500px, 6800px); }
+.k8 input.v ~ .i1 .i2 { transform: translate(-2800px, -9200px); }
+.k9 input.d ~ .i1 .i2 .i3 { transform: translate(-9300px, -400px); }
+.k6 input.l ~ .i1 .i2 { transform: translate(-200px, 9700px); }
+.k2 input.n ~ .i1 .i2 { transform: translate(400px, -2300px); }
+.k11 input.j ~ .i1 .i2 .i3 { transform: translate(-5300px, 12500px); }
+.k5 input.u ~ .i1 .i2 { transform: translate(300px, -500px); }
+.k3 input.s ~ .i1 .i2 { transform: translate(-1200px, 9100px); }
+.k10 input.n ~ .i1 .i2 { transform: translate(-9200px, 6800px); }
+.k4 input.j ~ .i1 .i2 { transform: translate(5500px, 300px); }
+.k1 input.a ~ .i1 .i2 .i3 { transform: translate(-13000px, -9000px); }
+.k1 input.d ~ .i1 .i2 { transform: translate(5600px, 7200px); }
+.k5 input.e ~ .i1 .i2 { transform: translate(-5800px, 6400px); }
+.k2 input.i ~ .i1 .i2 { transform: translate(7400px, 6900px); }
+.k9 input.w ~ .i1 .i2 .i3 { transform: translate(-11000px, -8800px); }
+.k0 input.m ~ .i1 .i2 .i3 { transform: translate(8600px, -7300px); }
+.k6 input.a ~ .i1 .i2 { transform: translate(-1100px, -9800px); }
+.k3 input.o ~ .i1 .i2 { transform: translate(2400px, 3500px); }
+.k1 input.m ~ .i1 .i2 { transform: translate(-3100px, -5300px); }
+.k8 input.s ~ .i1 .i2 { transform: translate(6900px, 9100px); }
+.k7 input.s ~ .i1 .i2 { transform: translate(-7700px, 5900px); }
+.k5 input.s ~ .i1 .i2 .i3 { transform: translate(10900px, -7200px); }
+.k4 input.d ~ .i1 .i2 .i3 { transform: translate(-3000px, -7500px); }
+.k4 input.m ~ .i1 .i2 { transform: translate(600px, 6900px); }
+.k4 input.s ~ .i1 .i2 .i3 { transform: translate(600px, -5000px); }
+.k5 input.h ~ .i1 .i2 { transform: translate(3500px, -9500px); }
+.k10 input.n ~ .i1 .i2 .i3 { transform: translate(2300px, -7600px); }
+.k10 input.c ~ .i1 .i2 { transform: translate(2900px, 9600px); }
+.k5 input.d ~ .i1 .i2 .i3 { transform: translate(-7400px, 7100px); }
+.k3 input.p ~ .i1 .i2 { transform: translate(9000px, -7400px); }
+.k6 input.o ~ .i1 .i2 .i3 { transform: translate(-10200px, 8400px); }
+.k1 input.g ~ .i1 .i2 { transform: translate(8900px, 9300px); }
+.k11 input.h ~ .i1 .i2 { transform: translate(9200px, 4700px); }
+.k12 input.k ~ .i1 .i2 { transform: translate(5800px, -2400px); }
+.k11 input.a ~ .i1 .i2 .i3 { transform: translate(7500px, 5200px); }
+.k4 input.o ~ .i1 .i2 { transform: translate(-3900px, 7500px); }
+.k8 input.i ~ .i1 .i2 { transform: translate(5500px, -2200px); }
+.k7 input.g ~ .i1 .i2 .i3 { transform: translate(3300px, 13500px); }
+.k12 input.m ~ .i1 .i2 { transform: translate(-4700px, -8600px); }
+.k4 input.o ~ .i1 .i2 .i3 { transform: translate(-4300px, -900px); }
+.k2 input.c ~ .i1 .i2 { transform: translate(7700px, -6200px); }
+.k9 input.s ~ .i1 .i2 .i3 { transform: translate(-9200px, -15600px); }
+.k4 input.l ~ .i1 .i2 .i3 { transform: translate(-8200px, -5000px); }
+.k3 input.k ~ .i1 .i2 .i3 { transform: translate(5800px, -14400px); }
+.k7 input.o ~ .i1 .i2 .i3 { transform: translate(9500px, 1400px); }
+.k7 input.g ~ .i1 .i2 { transform: translate(-10000px, -9700px); }
+.k2 input.h ~ .i1 .i2 { transform: translate(6600px, -7900px); }
+.k7 input.f ~ .i1 .i2 { transform: translate(7500px, -4200px); }
+.k0 input.f ~ .i1 .i2 { transform: translate(9300px, 4700px); }
+.k2 input.o ~ .i1 .i2 .i3 { transform: translate(-2600px, 5100px); }
+.k11 input.r ~ .i1 .i2 { transform: translate(-5000px, -700px); }
+.k1 input.o ~ .i1 .i2 { transform: translate(9000px, -300px); }
+.k1 input.v ~ .i1 .i2 { transform: translate(9400px, 6300px); }
+.k9 input.f ~ .i1 .i2 { transform: translate(-9100px, -6700px); }
+.k7 input.j ~ .i1 .i2 .i3 { transform: translate(-9000px, 7100px); }
+.k11 input.p ~ .i1 .i2 { transform: translate(-6800px, 5700px); }
+.k1 input.s ~ .i1 .i2 { transform: translate(5300px, -2500px); }
+.k10 input.p ~ .i1 .i2 { transform: translate(-8600px, -2200px); }
+.k9 input.c ~ .i1 .i2 .i3 { transform: translate(13000px, 17500px); }
+.k6 input.s ~ .i1 .i2 { transform: translate(-2500px, -2400px); }
+.k7 input.o ~ .i1 .i2 { transform: translate(-5900px, 1000px); }
+.k0 input.l ~ .i1 .i2 .i3 { transform: translate(3500px, 7900px); }
+.k2 input.f ~ .i1 .i2 { transform: translate(-7600px, -7000px); }
+.k10 input.f ~ .i1 .i2 { transform: translate(-800px, -5900px); }
+.k11 input.o ~ .i1 .i2 { transform: translate(-8700px, 8200px); }
+.k11 input.c ~ .i1 .i2 .i3 { transform: translate(-2600px, 7600px); }
+.k4 input.x ~ .i1 .i2 .i3 { transform: translate(700px, -7600px); }
+.k10 input.s ~ .i1 .i2 { transform: translate(-5400px, 9000px); }
+.k7 input.x ~ .i1 .i2 .i3 { transform: translate(-12300px, 9000px); }
+.k12 input.r ~ .i1 .i2 .i3 { transform: translate(8700px, -3400px); }
+.k0 input.e ~ .i1 .i2 .i3 { transform: translate(300px, -8100px); }
+.k8 input.l ~ .i1 .i2 .i3 { transform: translate(17000px, 4700px); }
+.k6 input.o ~ .i1 .i2 { transform: translate(4700px, -400px); }
+.k3 input.u ~ .i1 .i2 { transform: translate(-5700px, 6900px); }
+.k4 input.z ~ .i1 .i2 .i3 { transform: translate(13000px, 2100px); }
+.k0 input.k ~ .i1 .i2 { transform: translate(-9600px, -1700px); }
+.k9 input.k ~ .i1 .i2 .i3 { transform: translate(-7400px, -11900px); }
+.k8 input.d ~ .i1 .i2 .i3 { transform: translate(-11500px, 12500px); }
+.k3 input.x ~ .i1 .i2 { transform: translate(2500px, -5600px); }
+.k4 input.p ~ .i1 .i2 { transform: translate(8800px, 5000px); }
+.k7 input.e ~ .i1 .i2 .i3 { transform: translate(-1700px, 6200px); }
+.k12 input.b ~ .i1 .i2 .i3 { transform: translate(-14400px, -7800px); }
+.k10 input.w ~ .i1 .i2 { transform: translate(800px, 5300px); }
+.k7 input.n ~ .i1 .i2 .i3 { transform: translate(-5100px, -1300px); }
+.k2 input.u ~ .i1 .i2 .i3 { transform: translate(-2700px, -3000px); }
+.k7 input.q ~ .i1 .i2 .i3 { transform: translate(-1200px, -3100px); }
+.k5 input.g ~ .i1 .i2 .i3 { transform: translate(-11600px, -3200px); }
+.k4 input.f ~ .i1 .i2 .i3 { transform: translate(13700px, 1700px); }
+.k3 input.f ~ .i1 .i2 { transform: translate(4800px, 6100px); }
+.k11 input.t ~ .i1 .i2 .i3 { transform: translate(9200px, 100px); }
+.k6 input.z ~ .i1 .i2 { transform: translate(9400px, 8300px); }
+.k6 input.d ~ .i1 .i2 { transform: translate(7900px, 9300px); }
+.k12 input.v ~ .i1 .i2 { transform: translate(7500px, -4600px); }
+.k10 input.i ~ .i1 .i2 .i3 { transform: translate(-7200px, -6500px); }
+.k1 input.f ~ .i1 .i2 .i3 { transform: translate(12200px, -8900px); }
+.k6 input.q ~ .i1 .i2 { transform: translate(-7700px, 1900px); }
+.k3 input.g ~ .i1 .i2 { transform: translate(-6900px, 5600px); }
+.k11 input.k ~ .i1 .i2 .i3 { transform: translate(1600px, 2800px); }
+.k12 input.l ~ .i1 .i2 { transform: translate(-600px, -9000px); }
+.k10 input.k ~ .i1 .i2 .i3 { transform: translate(9100px, 17500px); }
+.k7 input.d ~ .i1 .i2 .i3 { transform: translate(13500px, -11600px); }
+.k12 input.g ~ .i1 .i2 { transform: translate(6000px, -4100px); }
+.k12 input.c ~ .i1 .i2 .i3 { transform: translate(16700px, -15600px); }
+.k5 input.x ~ .i1 .i2 { transform: translate(-7400px, 2900px); }
+.k12 input.g ~ .i1 .i2 .i3 { transform: translate(-14000px, -4400px); }
+.k2 input.d ~ .i1 .i2 { transform: translate(-1500px, 1900px); }
+.k2 input.y ~ .i1 .i2 { transform: translate(-8900px, 9700px); }
+.k2 input.b ~ .i1 .i2 .i3 { transform: translate(3600px, -10400px); }
+.k8 input.u ~ .i1 .i2 .i3 { transform: translate(5100px, 3400px); }
+.k2 input.o ~ .i1 .i2 { transform: translate(8700px, 1900px); }
+.k4 input.t ~ .i1 .i2 { transform: translate(1100px, -1800px); }
+.k5 input.i ~ .i1 .i2 { transform: translate(9300px, 3200px); }
+.k2 input.g ~ .i1 .i2 { transform: translate(8100px, 4700px); }
+.k7 input.b ~ .i1 .i2 { transform: translate(4400px, -4100px); }
+.k3 input.t ~ .i1 .i2 { transform: translate(-3900px, 4300px); }
+.k8 input.g ~ .i1 .i2 { transform: translate(-5100px, -4600px); }
+.k10 input.j ~ .i1 .i2 .i3 { transform: translate(-7100px, -8200px); }
+.k5 input.u ~ .i1 .i2 .i3 { transform: translate(-6400px, -7300px); }
+.k1 input.u ~ .i1 .i2 .i3 { transform: translate(7100px, 6600px); }
+.k3 input.m ~ .i1 .i2 { transform: translate(6200px, 4000px); }
+.k4 input.x ~ .i1 .i2 { transform: translate(7200px, 6800px); }
+.k4 input.q ~ .i1 .i2 { transform: translate(8100px, -4900px); }
+.k4 input.v ~ .i1 .i2 { transform: translate(-3600px, -5800px); }
+.k3 input.j ~ .i1 .i2 .i3 { transform: translate(-3000px, 2900px); }
+.k3 input.y ~ .i1 .i2 { transform: translate(8900px, -3300px); }
+.k4 input.h ~ .i1 .i2 .i3 { transform: translate(6700px, -2200px); }
+.k3 input.t ~ .i1 .i2 .i3 { transform: translate(600px, -10300px); }
+.k3 input.e ~ .i1 .i2 .i3 { transform: translate(-2800px, 2400px); }
+.k1 input.w ~ .i1 .i2 { transform: translate(4500px, -4600px); }
+.k11 input.a ~ .i1 .i2 { transform: translate(-7900px, -9300px); }
+.k1 input.j ~ .i1 .i2 { transform: translate(4500px, 6000px); }
+.k8 input.j ~ .i1 .i2 .i3 { transform: translate(1300px, -6400px); }
+.k11 input.e ~ .i1 .i2 { transform: translate(-2300px, -1700px); }
+.k11 input.v ~ .i1 .i2 { transform: translate(-9200px, 800px); }
+.k8 input.h ~ .i1 .i2 .i3 { transform: translate(5500px, 6400px); }
+.k8 input.l ~ .i1 .i2 { transform: translate(-9300px, -8800px); }
+.k12 input.o ~ .i1 .i2 .i3 { transform: translate(800px, 3700px); }
+.k9 input.r ~ .i1 .i2 .i3 { transform: translate(100px, 6900px); }
+.k8 input.p ~ .i1 .i2 { transform: translate(2300px, 3900px); }
+.k3 input.u ~ .i1 .i2 .i3 { transform: translate(4700px, -2000px); }
+.k6 input.x ~ .i1 .i2 { transform: translate(9900px, -400px); }
+.k2 input.z ~ .i1 .i2 { transform: translate(-5100px, -5300px); }
+.k11 input.f ~ .i1 .i2 .i3 { transform: translate(-10400px, -3800px); }
+.k9 input.g ~ .i1 .i2 { transform: translate(6900px, 3500px); }
+.k1 input.i ~ .i1 .i2 { transform: translate(8400px, -9300px); }
+.k1 input.x ~ .i1 .i2 { transform: translate(-5700px, -5200px); }
+.k2 input.p ~ .i1 .i2 { transform: translate(2600px, 600px); }
+.k6 input.m ~ .i1 .i2 { transform: translate(-6100px, 300px); }
+.k7 input.a ~ .i1 .i2 { transform: translate(5800px, -3200px); }
+.k0 input.s ~ .i1 .i2 .i3 { transform: translate(11900px, -8000px); }
+.k5 input.y ~ .i1 .i2 { transform: translate(2500px, 5500px); }
+.k9 input.g ~ .i1 .i2 .i3 { transform: translate(-4200px, -5000px); }
+.k0 input.o ~ .i1 .i2 .i3 { transform: translate(-1100px, -5200px); }
+.k7 input.l ~ .i1 .i2 .i3 { transform: translate(-13900px, 11100px); }
+.k5 input.o ~ .i1 .i2 { transform: translate(5800px, -9500px); }
+.k2 input.k ~ .i1 .i2 .i3 { transform: translate(-500px, -7400px); }
+.k7 input.y ~ .i1 .i2 .i3 { transform: translate(900px, 7600px); }
+.k11 input.q ~ .i1 .i2 { transform: translate(-1300px, 9700px); }
+.k7 input.q ~ .i1 .i2 { transform: translate(-8400px, 5900px); }
+.k0 input.p ~ .i1 .i2 .i3 { transform: translate(-6800px, 3500px); }
+.k6 input.g ~ .i1 .i2 { transform: translate(-700px, 1000px); }
+.k7 input.k ~ .i1 .i2 { transform: translate(6200px, 4600px); }
+.k0 input.r ~ .i1 .i2 .i3 { transform: translate(4500px, -12300px); }
+.k8 input.i ~ .i1 .i2 .i3 { transform: translate(-5800px, 9500px); }
+.k10 input.f ~ .i1 .i2 .i3 { transform: translate(-100px, 4300px); }
+.k12 input.s ~ .i1 .i2 .i3 { transform: translate(2400px, -3100px); }
+.k7 input.n ~ .i1 .i2 { transform: translate(7600px, -7500px); }
+.k5 input.c ~ .i1 .i2 .i3 { transform: translate(500px, -11700px); }
+.k2 input.k ~ .i1 .i2 { transform: translate(9300px, 9200px); }
+.k3 input.r ~ .i1 .i2 .i3 { transform: translate(-1600px, -7000px); }
+.k2 input.p ~ .i1 .i2 .i3 { transform: translate(-9900px, -10500px); }
+.k4 input.w ~ .i1 .i2 { transform: translate(-1700px, -2600px); }
+.k6 input.n ~ .i1 .i2 .i3 { transform: translate(-4700px, 2000px); }
+.k11 input.r ~ .i1 .i2 .i3 { transform: translate(-5000px, 6600px); }
+.k9 input.f ~ .i1 .i2 .i3 { transform: translate(12500px, 3400px); }
+.k1 input.d ~ .i1 .i2 .i3 { transform: translate(-3400px, -5300px); }
+.k3 input.d ~ .i1 .i2 { transform: translate(3300px, 1900px); }
+.k2 input.v ~ .i1 .i2 { transform: translate(-5900px, -8300px); }
+.k2 input.r ~ .i1 .i2 .i3 { transform: translate(400px, 7100px); }
+.k6 input.k ~ .i1 .i2 { transform: translate(-2900px, 6900px); }
+.k5 input.e ~ .i1 .i2 .i3 { transform: translate(5100px, -2400px); }
+.k7 input.l ~ .i1 .i2 { transform: translate(7400px, -4700px); }
+.k5 input.g ~ .i1 .i2 { transform: translate(5000px, 400px); }
+.k0 input.x ~ .i1 .i2 { transform: translate(9200px, -5900px); }
+.k2 input.f ~ .i1 .i2 .i3 { transform: translate(1000px, 14300px); }
+.k3 input.e ~ .i1 .i2 { transform: translate(4200px, -4900px); }
+.k10 input.b ~ .i1 .i2 { transform: translate(5200px, -5700px); }
+.k8 input.o ~ .i1 .i2 { transform: translate(9000px, -4400px); }
+.k0 input.z ~ .i1 .i2 .i3 { transform: translate(-3100px, 1500px); }
+.k9 input.h ~ .i1 .i2 { transform: translate(-5200px, -100px); }
+.k6 input.b ~ .i1 .i2 { transform: translate(1000px, -7200px); }
+.k2 input.j ~ .i1 .i2 { transform: translate(6300px, -1900px); }
+.k5 input.s ~ .i1 .i2 { transform: translate(-2300px, 6900px); }
+.k0 input.a ~ .i1 .i2 { transform: translate(-8100px, -8100px); }
+.k8 input.e ~ .i1 .i2 .i3 { transform: translate(4800px, 5300px); }
+.k8 input.o ~ .i1 .i2 .i3 { transform: translate(-2200px, -700px); }
+.k10 input.h ~ .i1 .i2 .i3 { transform: translate(-100px, 12100px); }
+.k6 input.v ~ .i1 .i2 .i3 { transform: translate(-10200px, -9900px); }
+.k1 input.c ~ .i1 .i2 .i3 { transform: translate(-4900px, 3200px); }
+.k12 input.d ~ .i1 .i2 { transform: translate(5500px, 6000px); }
+.k9 input.d ~ .i1 .i2 { transform: translate(500px, 9400px); }
+.k9 input.a ~ .i1 .i2 .i3 { transform: translate(400px, 2400px); }
+.k5 input.c ~ .i1 .i2 { transform: translate(300px, 7100px); }
+.k5 input.t ~ .i1 .i2 .i3 { transform: translate(-6600px, -400px); }
+.k3 input.i ~ .i1 .i2 .i3 { transform: translate(-3500px, -8000px); }
+.k10 input.g ~ .i1 .i2 .i3 { transform: translate(11800px, 8200px); }
+.k0 input.d ~ .i1 .i2 .i3 { transform: translate(-6400px, 10500px); }
+.k9 input.j ~ .i1 .i2 .i3 { transform: translate(-10200px, 2100px); }
+.k6 input.m ~ .i1 .i2 .i3 { transform: translate(9500px, -7600px); }
+.k5 input.h ~ .i1 .i2 .i3 { transform: translate(-200px, 1700px); }
+.k8 input.r ~ .i1 .i2 .i3 { transform: translate(9700px, -18400px); }
+.k6 input.y ~ .i1 .i2 { transform: translate(9300px, 700px); }
+.k0 input.x ~ .i1 .i2 .i3 { transform: translate(-11900px, 11700px); }
+.k6 input.n ~ .i1 .i2 { transform: translate(-400px, -5700px); }
+.k2 input.a ~ .i1 .i2 { transform: translate(4700px, -8100px); }
+.k0 input.e ~ .i1 .i2 { transform: translate(-300px, 8100px); }
+.k6 input.u ~ .i1 .i2 { transform: translate(-4000px, -7400px); }
+.k12 input.z ~ .i1 .i2 .i3 { transform: translate(5800px, 1000px); }
+.k9 input.c ~ .i1 .i2 { transform: translate(-9900px, -10000px); }
+.k12 input.x ~ .i1 .i2 .i3 { transform: translate(-6600px, 2600px); }
+.k5 input.p ~ .i1 .i2 .i3 { transform: translate(4500px, 2900px); }
+.k9 input.y ~ .i1 .i2 .i3 { transform: translate(-4900px, 4700px); }
+.k8 input.c ~ .i1 .i2 { transform: translate(1800px, -9800px); }
+.k9 input.o ~ .i1 .i2 { transform: translate(-8100px, 3800px); }
+.k0 input.q ~ .i1 .i2 .i3 { transform: translate(11800px, 6800px); }
+.k7 input.v ~ .i1 .i2 { transform: translate(-8300px, -4800px); }
+.k3 input.m ~ .i1 .i2 .i3 { transform: translate(400px, 2000px); }
+.k3 input.l ~ .i1 .i2 { transform: translate(5500px, -8700px); }
+.k8 input.e ~ .i1 .i2 { transform: translate(-4800px, -5300px); }
+.k7 input.x ~ .i1 .i2 { transform: translate(6400px, 600px); }
+.k1 input.n ~ .i1 .i2 .i3 { transform: translate(2100px, 6800px); }
+.k4 input.g ~ .i1 .i2 { transform: translate(-9500px, 7700px); }
+.k6 input.f ~ .i1 .i2 .i3 { transform: translate(7300px, -9000px); }
+.k5 input.z ~ .i1 .i2 .i3 { transform: translate(13800px, -9600px); }
+.k9 input.y ~ .i1 .i2 { transform: translate(2500px, 5000px); }
+.k3 input.a ~ .i1 .i2 .i3 { transform: translate(-5800px, 2400px); }
+.k5 input.z ~ .i1 .i2 { transform: translate(-6800px, 4200px); }
+.k5 input.b ~ .i1 .i2 .i3 { transform: translate(-7700px, -9300px); }
+.k7 input.a ~ .i1 .i2 .i3 { transform: translate(2300px, -4500px); }
+.k11 input.b ~ .i1 .i2 .i3 { transform: translate(12000px, 4500px); }
+.k1 input.r ~ .i1 .i2 { transform: translate(-9400px, -1300px); }
+.k12 input.t ~ .i1 .i2 { transform: translate(100px, -7800px); }
+.k1 input.k ~ .i1 .i2 { transform: translate(-2400px, -2300px); }
+.k3 input.p ~ .i1 .i2 .i3 { transform: translate(-7800px, 7200px); }
+.k5 input.f ~ .i1 .i2 { transform: translate(-600px, 7600px); }
+.k4 input.m ~ .i1 .i2 .i3 { transform: translate(-2900px, -3300px); }
+.k9 input.r ~ .i1 .i2 { transform: translate(-100px, -6900px); }
+.k4 input.e ~ .i1 .i2 { transform: translate(6500px, -3000px); }
+.k2 input.z ~ .i1 .i2 .i3 { transform: translate(400px, 5000px); }
+.k4 input.p ~ .i1 .i2 .i3 { transform: translate(400px, -8700px); }
+.k10 input.g ~ .i1 .i2 { transform: translate(-4800px, -7100px); }
+.k11 input.b ~ .i1 .i2 { transform: translate(-4200px, -5900px); }
+.k5 input.l ~ .i1 .i2 { transform: translate(-200px, 2600px); }
+.k9 input.u ~ .i1 .i2 .i3 { transform: translate(5400px, -4800px); }
+.k10 input.l ~ .i1 .i2 { transform: translate(8400px, 8800px); }
+.k2 input.d ~ .i1 .i2 .i3 { transform: translate(-7000px, -3100px); }
+.k7 input.h ~ .i1 .i2 { transform: translate(9100px, -4700px); }
+.k5 input.d ~ .i1 .i2 { transform: translate(6600px, -5300px); }
+.k5 input.w ~ .i1 .i2 { transform: translate(-1700px, 1100px); }
+.k11 input.l ~ .i1 .i2 .i3 { transform: translate(-1500px, -9300px); }
+.k3 input.b ~ .i1 .i2 { transform: translate(5800px, -5600px); }
+.k9 input.t ~ .i1 .i2 .i3 { transform: translate(-7500px, 100px); }
+.k1 input.y ~ .i1 .i2 { transform: translate(300px, -4600px); }
+.k11 input.m ~ .i1 .i2 .i3 { transform: translate(7600px, -8400px); }
+.k10 input.u ~ .i1 .i2 { transform: translate(700px, -500px); }
+.k12 input.q ~ .i1 .i2 { transform: translate(5600px, 8400px); }
+.k7 input.m ~ .i1 .i2 { transform: translate(1600px, 4600px); }
+.k3 input.s ~ .i1 .i2 .i3 { transform: translate(-6400px, -9300px); }
+.k8 input.y ~ .i1 .i2 .i3 { transform: translate(8300px, -9000px); }
+.k10 input.b ~ .i1 .i2 .i3 { transform: translate(-1600px, 4200px); }
+.k6 input.r ~ .i1 .i2 { transform: translate(5800px, 9800px); }
+.k9 input.p ~ .i1 .i2 .i3 { transform: translate(-10700px, -3700px); }
+.k4 input.r ~ .i1 .i2 { transform: translate(8900px, 300px); }
+.k6 input.e ~ .i1 .i2 { transform: translate(-9100px, 1100px); }
+.k6 input.w ~ .i1 .i2 { transform: translate(-4100px, -6000px); }
+.k5 input.w ~ .i1 .i2 .i3 { transform: translate(-400px, -4100px); }
+.k12 input.a ~ .i1 .i2 { transform: translate(3300px, -4400px); }
+.k11 input.l ~ .i1 .i2 { transform: translate(6700px, -600px); }
+.k0 input.o ~ .i1 .i2 { transform: translate(3800px, 5600px); }
+.k1 input.j ~ .i1 .i2 .i3 { transform: translate(400px, 300px); }
+.k9 input.n ~ .i1 .i2 .i3 { transform: translate(-14600px, 4400px); }
+.k0 input.h ~ .i1 .i2 { transform: translate(8800px, 10000px); }
+.k7 input.c ~ .i1 .i2 { transform: translate(-7300px, -7800px); }
+.k6 input.h ~ .i1 .i2 .i3 { transform: translate(-12900px, 800px); }
+.k11 input.x ~ .i1 .i2 .i3 { transform: translate(5700px, 2900px); }
+.k4 input.n ~ .i1 .i2 { transform: translate(-9700px, -6500px); }
+.k4 input.b ~ .i1 .i2 { transform: translate(-5300px, 7200px); }
+.k8 input.b ~ .i1 .i2 .i3 { transform: translate(-3600px, -3100px); }
+.k12 input.n ~ .i1 .i2 { transform: translate(-5900px, 7300px); }
+.k8 input.h ~ .i1 .i2 { transform: translate(-9800px, 1500px); }
+.k9 input.e ~ .i1 .i2 { transform: translate(6300px, 6800px); }
+.k11 input.c ~ .i1 .i2 { transform: translate(-5200px, -5000px); }
+.k8 input.w ~ .i1 .i2 { transform: translate(8700px, -4200px); }
+.k3 input.n ~ .i1 .i2 { transform: translate(-3300px, 10000px); }
+.k2 input.e ~ .i1 .i2 .i3 { transform: translate(-5700px, 11300px); }
+.k4 input.i ~ .i1 .i2 .i3 { transform: translate(8100px, -2000px); }
+.k5 input.r ~ .i1 .i2 .i3 { transform: translate(-11000px, 8400px); }
+.k4 input.u ~ .i1 .i2 { transform: translate(-4500px, -3400px); }
+.k1 input.z ~ .i1 .i2 { transform: translate(4300px, -9800px); }
+.k12 input.w ~ .i1 .i2 { transform: translate(7400px, -1000px); }
+.k10 input.d ~ .i1 .i2 .i3 { transform: translate(-7200px, -13900px); }
+.k0 input.c ~ .i1 .i2 { transform: translate(-6500px, -3200px); }
+.k0 input.k ~ .i1 .i2 .i3 { transform: translate(12200px, 6900px); }
+.k1 input.y ~ .i1 .i2 .i3 { transform: translate(-400px, 1000px); }
+.k4 input.j ~ .i1 .i2 .i3 { transform: translate(-11900px, -4200px); }
+.k2 input.e ~ .i1 .i2 { transform: translate(3700px, -8700px); }
+.k11 input.x ~ .i1 .i2 { transform: translate(-9700px, 3200px); }
+.k5 input.v ~ .i1 .i2 .i3 { transform: translate(-3500px, 5400px); }
+.k11 input.p ~ .i1 .i2 .i3 { transform: translate(-100px, -10200px); }
+.k9 input.m ~ .i1 .i2 .i3 { transform: translate(3500px, 10500px); }
+.k9 input.i ~ .i1 .i2 { transform: translate(-2900px, -7300px); }
+.k7 input.p ~ .i1 .i2 { transform: translate(600px, 700px); }
+.k9 input.z ~ .i1 .i2 { transform: translate(4300px, -5400px); }
+.k4 input.n ~ .i1 .i2 .i3 { transform: translate(1200px, 14300px); }
+.k7 input.h ~ .i1 .i2 .i3 { transform: translate(400px, 2600px); }
+.k10 input.e ~ .i1 .i2 { transform: translate(6200px, -1800px); }
+.k4 input.c ~ .i1 .i2 .i3 { transform: translate(-2900px, 4900px); }
+.k3 input.z ~ .i1 .i2 { transform: translate(-8200px, -900px); }
+.k5 input.f ~ .i1 .i2 .i3 { transform: translate(-5300px, -15400px); }
+.k2 input.m ~ .i1 .i2 { transform: translate(8900px, -5200px); }
+.k4 input.y ~ .i1 .i2 { transform: translate(-9200px, -9200px); }
+.k9 input.k ~ .i1 .i2 { transform: translate(-700px, 3900px); }
+.k1 input.o ~ .i1 .i2 .i3 { transform: translate(-17800px, 5300px); }
+.k9 input.o ~ .i1 .i2 .i3 { transform: translate(3000px, 2700px); }
+.k6 input.i ~ .i1 .i2 { transform: translate(-8600px, -5100px); }
+.k3 input.g ~ .i1 .i2 .i3 { transform: translate(-1500px, -8700px); }
+.k11 input.j ~ .i1 .i2 { transform: translate(7900px, -10000px); }
+.k8 input.k ~ .i1 .i2 .i3 { transform: translate(-8200px, 1700px); }
+.k10 input.r ~ .i1 .i2 { transform: translate(9900px, 6400px); }
+.k3 input.x ~ .i1 .i2 .i3 { transform: translate(-5900px, 12200px); }
+.k2 input.q ~ .i1 .i2 .i3 { transform: translate(3700px, -3800px); }
+.k7 input.f ~ .i1 .i2 .i3 { transform: translate(-7500px, 4200px); }
+.k10 input.t ~ .i1 .i2 .i3 { transform: translate(6500px, 1800px); }
+.k12 input.e ~ .i1 .i2 .i3 { transform: translate(-6500px, 3900px); }
+.k1 input.s ~ .i1 .i2 .i3 { transform: translate(-11800px, 5400px); }
+.k12 input.n ~ .i1 .i2 .i3 { transform: translate(5700px, -16500px); }
+.k4 input.u ~ .i1 .i2 .i3 { transform: translate(8800px, 5400px); }
+.k7 input.t ~ .i1 .i2 .i3 { transform: translate(11200px, -900px); }
+.k1 input.p ~ .i1 .i2 { transform: translate(4300px, -1800px); }
+.k5 input.m ~ .i1 .i2 .i3 { transform: translate(-12400px, 14900px); }
+.k6 input.r ~ .i1 .i2 .i3 { transform: translate(1000px, -16100px); }
+.k0 input.h ~ .i1 .i2 .i3 { transform: translate(-12100px, -2300px); }
+.k2 input.l ~ .i1 .i2 { transform: translate(-400px, 1400px); }
+.k2 input.v ~ .i1 .i2 .i3 { transform: translate(-3200px, 4900px); }
+.k6 input.p ~ .i1 .i2 .i3 { transform: translate(15200px, 11300px); }
+.k3 input.h ~ .i1 .i2 .i3 { transform: translate(600px, 9700px); }
+.k10 input.a ~ .i1 .i2 { transform: translate(1400px, 4100px); }
+.k8 input.a ~ .i1 .i2 .i3 { transform: translate(-16100px, -13000px); }
+.k0 input.b ~ .i1 .i2 { transform: translate(-4400px, 4800px); }
+.k9 input.q ~ .i1 .i2 { transform: translate(1500px, 400px); }
+.k8 input.q ~ .i1 .i2 .i3 { transform: translate(18800px, 8000px); }
+.k0 input.i ~ .i1 .i2 { transform: translate(-3200px, -4100px); }
+.k12 input.h ~ .i1 .i2 { transform: translate(9400px, -100px); }
+.k5 input.a ~ .i1 .i2 { transform: translate(2400px, -6900px); }
+.k3 input.z ~ .i1 .i2 .i3 { transform: translate(4200px, -4600px); }
+.k12 input.u ~ .i1 .i2 .i3 { transform: translate(12500px, -13800px); }
+.k8 input.f ~ .i1 .i2 { transform: translate(-7300px, 6500px); }
+.k0 input.w ~ .i1 .i2 .i3 { transform: translate(9300px, 7700px); }
+.k8 input.b ~ .i1 .i2 { transform: translate(9900px, 3600px); }
+.k10 input.m ~ .i1 .i2 { transform: translate(-8600px, -4700px); }
+.k7 input.p ~ .i1 .i2 .i3 { transform: translate(-3600px, -8500px); }
+.k10 input.r ~ .i1 .i2 .i3 { transform: translate(-9600px, 300px); }
+.k3 input.q ~ .i1 .i2 .i3 { transform: translate(4500px, 15800px); }
+.k5 input.n ~ .i1 .i2 .i3 { transform: translate(5600px, 13000px); }
+.k3 input.j ~ .i1 .i2 { transform: translate(7300px, -9200px); }
+.k7 input.w ~ .i1 .i2 .i3 { transform: translate(11500px, 4200px); }
+.k12 input.t ~ .i1 .i2 .i3 { transform: translate(-100px, 7800px); }
+.k0 input.j ~ .i1 .i2 .i3 { transform: translate(8000px, 100px); }
+.k8 input.g ~ .i1 .i2 .i3 { transform: translate(-100px, -100px); }
+.k1 input.b ~ .i1 .i2 .i3 { transform: translate(1700px, -8200px); }
+.k0 input.m ~ .i1 .i2 { transform: translate(-4500px, -1700px); }
+.k7 input.e ~ .i1 .i2 { transform: translate(5400px, -600px); }
+.k0 input.u ~ .i1 .i2 .i3 { transform: translate(5200px, -100px); }
+.k9 input.n ~ .i1 .i2 { transform: translate(6300px, -4100px); }
+.k7 input.r ~ .i1 .i2 .i3 { transform: translate(-12400px, 600px); }
+.k2 input.q ~ .i1 .i2 { transform: translate(1100px, 6800px); }
+.k10 input.v ~ .i1 .i2 .i3 { transform: translate(500px, -16700px); }
+.k11 input.y ~ .i1 .i2 .i3 { transform: translate(-2100px, -18500px); }
+.k10 input.y ~ .i1 .i2 { transform: translate(-5800px, -6600px); }
+.k0 input.r ~ .i1 .i2 { transform: translate(2100px, 3800px); }
+.k8 input.t ~ .i1 .i2 .i3 { transform: translate(800px, -8900px); }
+.k5 input.j ~ .i1 .i2 .i3 { transform: translate(-3000px, 3400px); }
+.k11 input.t ~ .i1 .i2 { transform: translate(-1400px, 7300px); }
+.k1 input.k ~ .i1 .i2 .i3 { transform: translate(2200px, 5000px); }
+.k8 input.j ~ .i1 .i2 { transform: translate(-5100px, 7300px); }
+.k4 input.k ~ .i1 .i2 { transform: translate(-5200px, 500px); }
+.k12 input.w ~ .i1 .i2 .i3 { transform: translate(2100px, 6700px); }
+.k4 input.q ~ .i1 .i2 .i3 { transform: translate(-12400px, 8900px); }
+.k0 input.y ~ .i1 .i2 { transform: translate(9300px, -2500px); }
+.k11 input.y ~ .i1 .i2 { transform: translate(7300px, 9300px); }
+.k1 input.w ~ .i1 .i2 .i3 { transform: translate(-300px, 5100px); }
+.k0 input.u ~ .i1 .i2 { transform: translate(1100px, 3500px); }
+.k9 input.l ~ .i1 .i2 { transform: translate(400px, -9600px); }
+.k3 input.i ~ .i1 .i2 { transform: translate(3500px, 8000px); }
+.k1 input.m ~ .i1 .i2 .i3 { transform: translate(5300px, -2300px); }
+.k9 input.s ~ .i1 .i2 { transform: translate(2100px, 5800px); }
+.k6 input.c ~ .i1 .i2 .i3 { transform: translate(-3600px, 7600px); }
+.k1 input.u ~ .i1 .i2 { transform: translate(-3400px, -6700px); }
+.k10 input.x ~ .i1 .i2 .i3 { transform: translate(-12200px, -5000px); }
+.k10 input.y ~ .i1 .i2 .i3 { transform: translate(7500px, 4400px); }
+.k4 input.c ~ .i1 .i2 { transform: translate(3100px, 2700px); }
+.k0 input.z ~ .i1 .i2 { transform: translate(-6200px, 1800px); }
+.k9 input.x ~ .i1 .i2 .i3 { transform: translate(11200px, -6100px); }
+.k10 input.q ~ .i1 .i2 .i3 { transform: translate(1600px, 13600px); }
+.k5 input.o ~ .i1 .i2 .i3 { transform: translate(-7700px, 17700px); }
+.k5 input.k ~ .i1 .i2 { transform: translate(4100px, 3300px); }
+.k1 input.t ~ .i1 .i2 { transform: translate(6800px, -7200px); }
+.k0 input.v ~ .i1 .i2 { transform: translate(3500px, -5700px); }
+.k2 input.g ~ .i1 .i2 .i3 { transform: translate(-10900px, -4800px); }
+.k12 input.y ~ .i1 .i2 { transform: translate(1800px, -7000px); }
+.k0 input.g ~ .i1 .i2 { transform: translate(6300px, 2700px); }
+.k9 input.i ~ .i1 .i2 .i3 { transform: translate(8800px, 10500px); }
+.k8 input.a ~ .i1 .i2 { transform: translate(7700px, 4100px); }
+.k0 input.n ~ .i1 .i2 { transform: translate(900px, -500px); }
+.k2 input.w ~ .i1 .i2 .i3 { transform: translate(-7200px, 1200px); }
+.k8 input.n ~ .i1 .i2 .i3 { transform: translate(4300px, -12700px); }
+.k11 input.m ~ .i1 .i2 { transform: translate(2200px, 5900px); }
+.k0 input.i ~ .i1 .i2 .i3 { transform: translate(1700px, 10900px); }
+.k12 input.r ~ .i1 .i2 { transform: translate(-5700px, -600px); }
+.k4 input.s ~ .i1 .i2 { transform: translate(4900px, 2300px); }
+.k6 input.c ~ .i1 .i2 { transform: translate(-2900px, -6100px); }
+.k0 input.a ~ .i1 .i2 .i3 { transform: translate(7800px, 10600px); }
+.k1 input.l ~ .i1 .i2 { transform: translate(-2000px, -1900px); }
+.k11 input.e ~ .i1 .i2 .i3 { transform: translate(-3700px, 8500px); }
+.k1 input.f ~ .i1 .i2 { transform: translate(-6900px, 8300px); }
+.k6 input.q ~ .i1 .i2 .i3 { transform: translate(11700px, 3400px); }
+.k5 input.t ~ .i1 .i2 { transform: translate(-2500px, -8800px); }
+.k0 input.j ~ .i1 .i2 { transform: translate(-5000px, 7100px); }
+.k3 input.f ~ .i1 .i2 .i3 { transform: translate(-10000px, -6600px); }
+.k8 input.s ~ .i1 .i2 .i3 { transform: translate(-1600px, -8400px); }
+.k7 input.s ~ .i1 .i2 .i3 { transform: translate(500px, -12500px); }
+.k4 input.t ~ .i1 .i2 .i3 { transform: translate(5500px, 300px); }
+.k9 input.m ~ .i1 .i2 { transform: translate(-8800px, -6400px); }
+.k9 input.v ~ .i1 .i2 { transform: translate(-4900px, -800px); }
+.k6 input.d ~ .i1 .i2 .i3 { transform: translate(-12200px, 200px); }
+.k12 input.p ~ .i1 .i2 .i3 { transform: translate(-12200px, -600px); }
+.k6 input.y ~ .i1 .i2 .i3 { transform: translate(-15400px, -10700px); }
+.k9 input.l ~ .i1 .i2 .i3 { transform: translate(-3200px, 16300px); }
+.k10 input.w ~ .i1 .i2 .i3 { transform: translate(-4400px, -7300px); }
+.k11 input.g ~ .i1 .i2 { transform: translate(1500px, 9800px); }
+.k0 input.n ~ .i1 .i2 .i3 { transform: translate(5000px, 10500px); }
+.k1 input.x ~ .i1 .i2 .i3 { transform: translate(10000px, 13600px); }
+.k6 input.a ~ .i1 .i2 .i3 { transform: translate(8200px, 7400px); }
+.k7 input.w ~ .i1 .i2 { transform: translate(-1700px, 1400px); }
+.k11 input.u ~ .i1 .i2 { transform: translate(4200px, -2400px); }
+.k3 input.d ~ .i1 .i2 .i3 { transform: translate(-11200px, 2800px); }
+.k4 input.e ~ .i1 .i2 .i3 { transform: translate(-3700px, 8000px); }
+.k3 input.k ~ .i1 .i2 { transform: translate(-9200px, 8200px); }
+.k10 input.p ~ .i1 .i2 .i3 { transform: translate(9500px, -4800px); }
+.k9 input.e ~ .i1 .i2 .i3 { transform: translate(-2700px, -14900px); }
+.k3 input.l ~ .i1 .i2 .i3 { transform: translate(-13300px, 6300px); }
+.k10 input.e ~ .i1 .i2 .i3 { transform: translate(-6200px, 1800px); }
+.k6 input.p ~ .i1 .i2 { transform: translate(-9700px, -5800px); }
+.k8 input.z ~ .i1 .i2 { transform: translate(-1500px, -2700px); }
+.k10 input.m ~ .i1 .i2 .i3 { transform: translate(16200px, 400px); }
+.k4 input.r ~ .i1 .i2 .i3 { transform: translate(-13400px, 1400px); }
+.k3 input.q ~ .i1 .i2 { transform: translate(-2800px, -7500px); }
+.k10 input.l ~ .i1 .i2 .i3 { transform: translate(-8000px, -8300px); }
+.k1 input.n ~ .i1 .i2 { transform: translate(-300px, -800px); }
+.k7 input.z ~ .i1 .i2 { transform: translate(-6600px, -4500px); }
+.k3 input.c ~ .i1 .i2 { transform: translate(6500px, 1100px); }
+.k3 input.y ~ .i1 .i2 .i3 { transform: translate(-1800px, -4400px); }
+.k3 input.w ~ .i1 .i2 { transform: translate(-1900px, 3700px); }
+.k10 input.j ~ .i1 .i2 { transform: translate(9800px, 5000px); }
+.k2 input.s ~ .i1 .i2 .i3 { transform: translate(-900px, 2200px); }
+.k1 input.q ~ .i1 .i2 .i3 { transform: translate(7600px, 900px); }
+.k12 input.p ~ .i1 .i2 { transform: translate(6900px, -3500px); }
+.k1 input.r ~ .i1 .i2 .i3 { transform: translate(1200px, 2400px); }
+.k8 input.x ~ .i1 .i2 { transform: translate(4200px, -2300px); }
+.k2 input.r ~ .i1 .i2 { transform: translate(5100px, 1700px); }
+.k0 input.c ~ .i1 .i2 .i3 { transform: translate(15000px, 6800px); }
+.k2 input.j ~ .i1 .i2 .i3 { transform: translate(-1900px, 8000px); }
+.k1 input.b ~ .i1 .i2 { transform: translate(1000px, 7100px); }
+.k8 input.u ~ .i1 .i2 { transform: translate(-8800px, -8400px); }
+.k7 input.k ~ .i1 .i2 .i3 { transform: translate(-4800px, -12400px); }
+.k1 input.v ~ .i1 .i2 .i3 { transform: translate(-6800px, -13500px); }
+.k6 input.f ~ .i1 .i2 { transform: translate(-7300px, 9000px); }
+.k2 input.y ~ .i1 .i2 .i3 { transform: translate(13600px, -4600px); }
+.k11 input.o ~ .i1 .i2 .i3 { transform: translate(8900px, -13400px); }
+
+  </style>
+  <body>
+    <div id="app">
+      <h1>Enter Password</h1>
+      <div>It will be green if password validates</div>
+      
+   <div class="box k0">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k1">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k2">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k3">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k4">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k5">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k6">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k7">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k8">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k9">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k10">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k11">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+   <div class="box k12">
+     <input type="text" maxlength="1" value="" />
+     <div class="i1"><div class="i2"><div class="i3"><div class="i4"></div></div></div></div>
+   </div>
+ 
+    </div>
+    <script>
+      for(let el of document.querySelectorAll("input")){
+        el.addEventListener("input", function() {
+          el.className = el.value;
+        });
+      }
+    </script>
+  </body>
+</html>
