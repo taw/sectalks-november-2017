@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+
+code = STDIN.read
+code.sub!(/\A#!.*\n+/, "")
+code.gsub!(/\d+/) do |d|
+  if d.to_i > 32
+    a,b = d.to_i.divmod(32)
+    "(#{a}*32+#{b})"
+  else
+    d
+  end
+end
+
+dt = (0..32).to_a.shuffle
+dt_shift = 2 + code.lines.size
+
+code.gsub!(/\d+/) do |d|
+  raise "Not supported" if d.to_i > 32
+  "DT[#{dt.index(d.to_i)+dt_shift}]"
+end
+
+puts "#!/usr/bin/env python"
+puts %Q[DT=[len(w)-1 for w in open(__file__).readlines()]]
+puts code
+puts dt.map{|i| " "*i }
