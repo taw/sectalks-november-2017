@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+decoder = %q[def (😱=BasicObject.new).method_missing(😓,*);😓 == :-@ ? TOPLEVEL_BINDING.eval(@😱):(@😱||="")<<"#{😓}".unpack("U*").map{|😐| 😐-0x1F600}.each_slice(3).map{|🙃,😐,😘|🙃*80*80+😐*80+😘}.pack("U*");end]
+
+puts "#!/usr/bin/env ruby"
+puts decoder
+bl = [""]
+ARGF.each_line do |line|
+  line.sub!(/^\s+/, "")
+  line.each_char do |b|
+    b = b.ord
+    bl.push("") if bl.empty? or bl[-1].size > 40
+    h,l = b.divmod(80)
+    hh,hl = h.divmod(80)
+    raise "Too high - #{h}" if hh > 80
+    bl[-1] += [0x1F600+hh, 0x1F600+hl, 0x1F600+l].pack("U*")
+  end
+end
+bl.each { |l|
+  puts "😱.#{l}"
+}
+puts "-😱"

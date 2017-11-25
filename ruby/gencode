@@ -1,0 +1,42 @@
+#!/usr/bin/env ruby
+
+def generate_code(key)
+  sz = key.size
+  output = ""
+  expected_key = key * 4
+
+  output << %Q[#!/usr/bin/env ruby\n]
+  output << %Q[\n]
+  output << %Q[def validate(password)\n]
+  output << %Q[  password = password.tr("\\x00-\\x7f", "\u4E00-\u4E7f") * 4\n]
+
+  keys = ""
+  until expected_key.empty?
+    i = rand(expected_key.size)
+    c = expected_key.slice!(i, 1).ord
+    kk = [i+0x4e00].pack("U")
+    cc = [c+0x4e00].pack("U")
+    keys << kk << cc
+  end
+
+  output << %Q[  password =~ /\\A#{'.' * sz * 4}\\z/ and #{keys.inspect}.chars.each_slice(2).all?{|k,c| password.slice!(k.ord%256, 1) == c}\n]
+
+  output << %Q[end\n]
+  output << %Q[\n]
+  output << %Q[if ARGV.size != 1\n]
+  output << %Q[  puts "Please specify password to test as argument"\n]
+  output << %Q[elsif validate ARGV[0]\n]
+  output << %Q[  puts "Correct"\n]
+  output << %Q[else\n]
+  output << %Q[  puts "Incorrect"\n]
+  output << %Q[end\n]
+  output
+end
+
+if ARGV.size == 1
+  key = ARGV[0]
+  puts generate_code(key)
+else
+  STDERR.puts "Usage: #{$0} key"
+  exit 1
+end
