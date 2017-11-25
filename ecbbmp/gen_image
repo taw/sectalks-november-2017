@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require "shellwords"
+
+if ARGV.size == 2
+  key, password = *ARGV
+  system *%W[
+    convert
+      +antialias
+      -size 320x240
+      -background lightblue
+      -font Verdana
+      -pointsize 32
+      -fill red
+      -gravity Center
+      #{"caption:The answer is #{key}"}
+      -flatten image.bmp
+  ]
+  system "openssl aes-128-ecb -k #{password.shellescape} <image.bmp >image.bmp.aes128ecb"
+else
+  STDERR.puts "Usage: #{$0} key"
+  exit 1
+end
